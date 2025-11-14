@@ -29,6 +29,7 @@ This website highlights the importance of clean water and promotes solutions for
 ## 📸 Screenshots
 
 Add your website screenshots here:
-images/1.jpeg
+![Screenshot](images/1.jpeg)
+
 
 
