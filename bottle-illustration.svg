@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400">
+  <defs>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e62e2d" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#e62e2d" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <path d="M80,40 L120,40 L120,80 C140,100 150,120 150,200 C150,300 130,350 120,360 L80,360 C70,350 50,300 50,200 C50,120 60,100 80,80 Z" fill="url(#water)" stroke="#e62e2d" stroke-width="2"/>
+  <path d="M80,20 L120,20 L120,40 L80,40 Z" fill="#e62e2d" opacity="0.8"/>
+  <path d="M90,10 L110,10 L110,20 L90,20 Z" fill="#e62e2d"/>
+  <text x="100" y="180" text-anchor="middle" font-family="Arial" font-size="24" fill="#e62e2d" font-weight="bold">CLEAR</text>
+  <text x="100" y="210" text-anchor="middle" font-family="Arial" font-size="14" fill="#e62e2d">PURE HYDRATION</text>
+</svg>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - CLEAR Water Bottles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Profile Page Specific Styles */
+        .profile-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .profile-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 30px;
+            border: 4px solid #e0f7fa;
+        }
+
+        .profile-info h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .profile-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-weight: 600;
+            font-size: 18px;
+            color: #00acc1;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .profile-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
+
+        .profile-sidebar {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+        }
+
+        .profile-nav {
+            list-style: none;
+        }
+
+        .profile-nav li {
+            margin-bottom: 15px;
+        }
+
+        .profile-nav a {
+            display: flex;
+            align-items: center;
+            color: #555;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .profile-nav a:hover,
+        .profile-nav a.active {
+            background-color: #e0f7fa;
+            color: #007c91;
+        }
+
+        .profile-nav svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .profile-main {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .order-history {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .order-history th {
+            text-align: left;
+            padding: 12px 15px;
+            background-color: #f5f5f5;
+            font-weight: 500;
+        }
+
+        .order-history td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .order-status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .status-completed {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .status-processing {
+            background-color: #fff8e1;
+            color: #ff8f00;
+        }
+
+        .status-shipped {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #00acc1;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #00838f;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #00acc1;
+            color: #00acc1;
+        }
+
+        .btn-outline:hover {
+            background-color: #e0f7fa;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .address-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+        }
+
+        .address-card h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .address-actions {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-avatar {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .profile-stats {
+                justify-content: center;
+            }
+
+            .profile-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../logo.svg" alt="CLEAR Water Bottles">
+                    <span>CLEAR</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
+                    <li><a href="clear.html">CLEAR</a></li>
+                    <li><a href="glass-bottles.html">GLASS BOTTLES</a></li>
+                    <li><a href="contact-us.html">CONTACT US</a></li>
+                    <li><a href="career.html">CAREER</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </a>
+                <a href="profile.html" class="icon-link active">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 4a4 4 0 100 8 4 4 0 000-8z"></path>
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    </svg>
+                </a>
+                <a href="cart.html" class="icon-link cart-icon">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path
+                            d="M9 20a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm-7-4h8.59L21 8H7L5.5 4H3">
+                        </path>
+                    </svg>
+                    <span class="cart-badge">2</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="../logo.svg" alt="CLEAR Water Bottles">
+                <span>CLEAR</span>
+            </div>
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" class="icon">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="about-us.html">ABOUT US</a></li>
+            <li><a href="clear.html">CLEAR</a></li>
+            <li><a href="glass-bottles.html">GLASS BOTTLES</a></li>
+            <li><a href="contact-us.html">CONTACT US</a></li>
+            <li><a href="career.html">CAREER</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Content -->
+    <section class="profile-section">
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png
+                " alt="User Avatar" class="profile-avatar">
+                <div class="profile-info">
+                    <h1>John Smith</h1>
+                    <p>Member since June 2022</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Orders</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Wishlist</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Reviews</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-sidebar">
+                    <ul class="profile-nav">
+                        <li><a href="#" class="active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                                Dashboard
+                            </a></li>
+                        <li><a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path
+                                        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6">
+                                    </path>
+                                </svg>
+                                Orders
+                            </a></li>
+                        <li><a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                Account Details
+                            </a></li>
+                        <li><a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z">
+                                    </path>
+                                </svg>
+                                Addresses
+                            </a></li>
+                        <li><a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                Wishlist
+                            </a></li>
+                        <li><a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>
+                                Notifications
+                            </a></li>
+                        <li><a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                    </path>
+                                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                                Help Center
+                            </a></li>
+                        <li><a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                </svg>
+                                Logout
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div class="profile-main">
+                    <h2 class="section-title">Recent Orders</h2>
+                    <table class="order-history">
+                        <thead>
+                            <tr>
+                                <th>Order #</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#CLEAR-2023-1562</td>
+                                <td>June 15, 2023</td>
+                                <td>2</td>
+                                <td>₹1,899</td>
+                                <td><span class="order-status status-completed">Completed</span></td>
+                                <td><button class="btn btn-outline">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#CLEAR-2023-1428</td>
+                                <td>May 28, 2023</td>
+                                <td>1</td>
+                                <td>₹999</td>
+                                <td><span class="order-status status-completed">Completed</span></td>
+                                <td><button class="btn btn-outline">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#CLEAR-2023-1357</td>
+                                <td>May 10, 2023</td>
+                                <td>3</td>
+                                <td>₹2,597</td>
+                                <td><span class="order-status status-shipped">Shipped</span></td>
+                                <td><button class="btn btn-outline">Track</button></td>
+                            </tr>
+                            <tr>
+                                <td>#CLEAR-2023-1289</td>
+                                <td>April 22, 2023</td>
+                                <td>1</td>
+                                <td>₹1,299</td>
+                                <td><span class="order-status status-processing">Processing</span></td>
+                                <td><button class="btn btn-outline">Details</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 class="section-title" style="margin-top: 40px;">Saved Addresses</h2>
+                    <div class="address-card">
+                        <h4>Primary Address</h4>
+                        <p>John Smith</p>
+                        <p>123 Main Street, Apt 4B</p>
+                        <p>Mumbai, Maharashtra 400001</p>
+                        <p>India</p>
+                        <p>Phone: +91 98765 43210</p>
+                        <div class="address-actions">
+                            <button class="btn btn-outline">Edit</button>
+                            <button class="btn btn-outline">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="address-card">
+                        <h4>Work Address</h4>
+                        <p>John Smith</p>
+                        <p>456 Business Park, Floor 8</p>
+                        <p>Bandra Kurla Complex, Mumbai 400051</p>
+                        <p>India</p>
+                        <p>Phone: +91 98765 43210</p>
+                        <div class="address-actions">
+                            <button class="btn btn-outline">Edit</button>
+                            <button class="btn btn-outline">Remove</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary">Add New Address</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column" data-animate="fade-up" data-delay="0">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="clear.html">CLEAR</a></li>
+                        <li><a href="glass-bottles.html">Glass Bottles</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="100">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="200">
+                    <h3>Branch Offices</h3>
+                    <address>
+                        <p>Mumbai Office:<br>123 Marine Drive, Mumbai 400001</p>
+                        <p>Delhi Office:<br>456 Connaught Place, New Delhi 110001</p>
+                        <p>Bangalore Office:<br>789 MG Road, Bangalore 560001</p>
+                    </address>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="300">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 CLEAR Water Bottles. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <img src="../payment-icons.png" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

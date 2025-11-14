@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLEAR - Premium Water Bottles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="logo.svg" alt="CLEAR Water Bottles">
+                    <span>CLEAR</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">HOME</a></li>
+                    <li><a href="pages/about-us.html">ABOUT US</a></li>
+                    <li><a href="pages/clear.html">CLEAR</a></li>
+                    <li><a href="pages/glass-bottles.html">GLASS BOTTLES</a></li>
+                    <li><a href="pages/contact-us.html">CONTACT US</a></li>
+                    <li><a href="pages/career.html">CAREER</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <a href="#" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </a>
+                <a href="./pages/profile.html" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 4a4 4 0 100 8 4 4 0 000-8z"></path>
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    </svg>
+                </a>
+                <a href="#" class="icon-link cart-icon">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M9 20a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm-7-4h8.59L21 8H7L5.5 4H3"></path>
+                    </svg>
+                    <span class="cart-badge">2</span>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="logo.svg" alt="CLEAR Water Bottles">
+                <span>CLEAR</span>
+            </div>
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" class="icon">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <ul>
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="pages/about-us.html">ABOUT US</a></li>
+            <li><a href="#">CLEAR</a></li>
+            <li><a href="#">GLASS BOTTLES</a></li>
+            <li><a href="#">CONTACT US</a></li>
+            <li><a href="#">CAREER</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="https://clearpani.com/wp-content/uploads/2025/02/7c8bb3_637084cfb46b464b9403b0c08ff74b88mv2.avif" alt="Premium Water Bottles">
+                <div class="slide-content">
+                    <!-- <h1 class="animate-text">Pure Hydration, Elevated Living</h1>
+                    <a href="#" class="btn btn-primary animate-btn">Shop Now</a> -->
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://clearpani.com/wp-content/uploads/2025/02/1.avif" alt="Quality Water Bottles">
+                <div class="slide-content">
+                    <!-- <h1 class="animate-text">Refreshing Clarity in Every Sip</h1>
+                    <a href="#" class="btn btn-primary animate-btn">Explore</a> -->
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/4.jpeg" alt="Eco-Friendly Water Bottles">
+                <div class="slide-content">
+                    <!-- <h1 class="animate-text">Sustainable Hydration Solutions</h1>
+                    <a href="#" class="btn btn-primary animate-btn">Learn More</a> -->
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="slider-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="slider-dot" data-slide="2" aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pioneers Section -->
+    <section class="pioneers-section" data-animate="fade-up">
+        <div class="container">
+            <div class="pioneers-content">
+                <div class="pioneers-text">
+                    <h2>Pioneers and Innovators</h2>
+                    <p>Established in 2010, CLEAR develops, manufactures, and markets premium water bottles that are both stylish and eco-sustainable. We take pride in our commitment to quality, innovation, and environmental responsibility.</p>
+                    <p>Our mission is to provide the highest quality hydration solutions while reducing plastic waste. CLEAR bottles are designed to offer pure, clean water without compromising on style or convenience.</p>
+                </div>
+                <div class="pioneers-image">
+                    <img src="bottle-illustration.svg" alt="CLEAR Water Bottle" class="floating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" data-animate="fade-up">
+        <div class="container">
+            <h2>Products</h2>
+            <p class="section-subtitle">Thoughtfully Designed Water Bottles for Everyday Hydration On the Go</p>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-animate="fade-up" data-delay="0">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-tag">NEW</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle 1L Glass Bottle</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(4.8)</span>
+                        </div>
+                        <div class="product-price">₹1,499.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-animate="fade-up" data-delay="100">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-tag">NEW</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle 750ml Glass Bottle</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(4.7)</span>
+                        </div>
+                        <div class="product-price">₹1,299.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-animate="fade-up" data-delay="200">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-tag">NEW</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle 2L Glass Bottle</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(4.9)</span>
+                        </div>
+                        <div class="product-price">₹1,899.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-animate="fade-up" data-delay="0">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle 500ml Glass Bottle</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(4.2)</span>
+                        </div>
+                        <div class="product-price">₹999.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card" data-animate="fade-up" data-delay="100">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle 1.5L Glass Bottle</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(4.5)</span>
+                        </div>
+                        <div class="product-price">₹1,699.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card" data-animate="fade-up" data-delay="200">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle Travel Pack</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(4.8)</span>
+                        </div>
+                        <div class="product-price">₹2,499.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="/pages/product.html" class="btn btn-secondary" data-animate="fade-up">VIEW ALL PRODUCTS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Standards Section -->
+    <section class="quality-section" data-animate="fade-up">
+        <div class="container">
+            <h2>Impeccable Quality Standards</h2>
+            <p class="section-subtitle">We follow the highest standards for production and adhere to international safety and quality certifications</p>
+            
+            <div class="quality-icons">
+                <div class="quality-item" data-animate="zoom-in" data-delay="0">
+                    <div class="quality-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path>
+                            <path d="M12 22.08V12"></path>
+                            <path d="M12 12L3.3 6.8"></path>
+                            <path d="M16.5 9.4L7.55 4.24"></path>
+                        </svg>
+                    </div>
+                    <h3>ECO-FRIENDLY</h3>
+                </div>
+                
+                <div class="quality-item" data-animate="zoom-in" data-delay="100">
+                    <div class="quality-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3>BPA-FREE</h3>
+                </div>
+                
+                <div class="quality-item" data-animate="zoom-in" data-delay="200">
+                    <div class="quality-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>5-STAR HYGIENE</h3>
+                </div>
+                
+                <div class="quality-item" data-animate="zoom-in" data-delay="300">
+                    <div class="quality-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 8v4l3 3"></path>
+                        </svg>
+                    </div>
+                    <h3>ISO CERTIFIED</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pan India Presence -->
+    <section class="india-presence">
+        <div class="container">
+            <h2>PAN INDIA PRESENCE</h2>
+            
+            <div class="presence-content">
+                <div class="india-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35633224.22652412!2d71.04700422094191!3d23.55922194044511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e1!3m2!1sen!2sin!4v1746425034672!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <div class="presence-stats" data-animate="fade-left">
+                    <div class="stat-item" data-animate="fade-up" data-delay="0">
+                        <div class="stat-number count-up" data-count="18">0</div>
+                        <div class="stat-label">STATES</div>
+                    </div>
+                    
+                    <div class="stat-item" data-animate="fade-up" data-delay="100">
+                        <div class="stat-number count-up" data-count="45">0</div>
+                        <div class="stat-label">CITY PRESENCE</div>
+                    </div>
+                    
+                    <div class="stat-item" data-animate="fade-up" data-delay="200">
+                        <div class="stat-number count-up" data-count="60">0</div>
+                        <div class="stat-label">MANUFACTURING UNITS</div>
+                    </div>
+                    
+                    <div class="stat-item" data-animate="fade-up" data-delay="300">
+                        <div class="stat-number count-up" data-count="125000">0</div>
+                        <div class="stat-label">RETAILERS</div>
+                    </div>
+                    
+                    <div class="stat-item" data-animate="fade-up" data-delay="400">
+                        <div class="stat-number count-up" data-count="1100">0</div>
+                        <div class="stat-label">DISTRIBUTORS</div>
+                    </div>
+                    
+                    <div class="stat-item" data-animate="fade-up" data-delay="500">
+                        <div class="stat-number count-up" data-count="5">0</div>
+                        <div class="stat-label">DECADES</div>
+                    </div>
+                    
+                    <div class="stat-item" data-animate="fade-up" data-delay="600">
+                        <div class="stat-number count-up" data-count="1600">0</div>
+                        <div class="stat-label">WORKFORCE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <!-- <section class="video-section" data-animate="fade-up">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-overlay">
+                    <button class="play-button pulse" aria-label="Play video">
+                        <svg viewBox="0 0 24 24" class="play-icon">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <video poster="video-poster.jpg" id="promo-video">
+                    <source src="promo-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Clients Section -->
+    <section class="clients-section" data-animate="fade-up">
+        <div class="container">
+            <h2>Our Esteemed Clients</h2>
+            
+            <div class="client-logos">
+                <!-- Row 1 -->
+                <div class="client-logo" data-animate="fade-up" data-delay="0">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Client Logo">
+                </div>
+                <div class="client-logo" data-animate="fade-up" data-delay="50">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Client Logo">
+                </div>
+                <div class="client-logo" data-animate="fade-up" data-delay="100">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Client Logo">
+                </div>
+                <div class="client-logo" data-animate="fade-up" data-delay="150">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Client Logo">
+                </div>
+                <div class="client-logo" data-animate="fade-up" data-delay="200">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Client Logo">
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="client-logo" data-animate="fade-up" data-delay="250">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Client Logo">
+                </div>
+                <div class="client-logo" data-animate="fade-up" data-delay="300">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Client Logo">
+                </div>
+                <div class="client-logo" data-animate="fade-up" data-delay="350">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Client Logo">
+                </div>
+                <div class="client-logo" data-animate="fade-up" data-delay="400">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Client Logo">
+                </div>
+                <div class="client-logo" data-animate="fade-up" data-delay="450">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Client Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section" data-animate="fade-up">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            
+            <form id="contact-form" class="contact-form" data-animate="fade-up">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" name="city" required>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="state">State *</label>
+                        <select id="state" name="state" required>
+                            <option value="">Select State</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <!-- Add more states as needed -->
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="work">Line of Work *</label>
+                        <input type="text" id="work" name="work" required>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span class="btn-text">SUBMIT</span>
+                        <span class="spinner"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column" data-animate="fade-up" data-delay="0">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="pages/about-us.html">About Us</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Quality</a></li>
+                        <li><a href="#">Clients</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column" data-animate="fade-up" data-delay="100">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column" data-animate="fade-up" data-delay="200">
+                    <h3>Branch Offices</h3>
+                    <address>
+                        <p>Mumbai Office:<br>123 Marine Drive, Mumbai 400001</p>
+                        <p>Delhi Office:<br>456 Connaught Place, New Delhi 110001</p>
+                        <p>Bangalore Office:<br>789 MG Road, Bangalore 560001</p>
+                    </address>
+                </div>
+                
+                <div class="footer-column" data-animate="fade-up" data-delay="300">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 CLEAR Water Bottles. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <img src="payment-icons.png" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

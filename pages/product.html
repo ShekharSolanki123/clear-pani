@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - CLEAR Water Bottles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Products Page Specific Styles */
+        .products-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .products-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .products-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .products-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .products-filter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .filter-label {
+            font-weight: 500;
+            color: #555;
+        }
+
+        .filter-select {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .view-toggle {
+            display: flex;
+            gap: 10px;
+        }
+
+        .view-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .view-btn.active {
+            background-color: #00acc1;
+            color: white;
+            border-color: #00acc1;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff5252;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .product-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-actions {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover .product-actions {
+            opacity: 1;
+        }
+
+        .action-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: white;
+            border: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background-color: #00acc1;
+            color: white;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            color: #00acc1;
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .product-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .current-price {
+            font-weight: 600;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .stars {
+            color: #ffc107;
+        }
+
+        .rating-count {
+            color: #666;
+            font-size: 13px;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 10px;
+            background-color: #00acc1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #00838f;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 10px;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #555;
+        }
+
+        .page-btn.active {
+            background-color: #00acc1;
+            color: white;
+            border-color: #00acc1;
+        }
+
+        .page-btn:hover:not(.active) {
+            background-color: #f5f5f5;
+        }
+
+        @media (max-width: 768px) {
+            .products-filter {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .filter-group {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+
+            .product-image {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../logo.svg" alt="CLEAR Water Bottles">
+                    <span>CLEAR</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
+                    <li><a href="products.html" class="active">PRODUCTS</a></li>
+                    <li><a href="glass-bottles.html">GLASS BOTTLES</a></li>
+                    <li><a href="contact-us.html">CONTACT US</a></li>
+                    <li><a href="career.html">CAREER</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </a>
+                <a href="profile.html" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 4a4 4 0 100 8 4 4 0 000-8z"></path>
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    </svg>
+                </a>
+                <a href="cart.html" class="icon-link cart-icon">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path
+                            d="M9 20a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm-7-4h8.59L21 8H7L5.5 4H3">
+                        </path>
+                    </svg>
+                    <span class="cart-badge">2</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="../logo.svg" alt="CLEAR Water Bottles">
+                <span>CLEAR</span>
+            </div>
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" class="icon">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="about-us.html">ABOUT US</a></li>
+            <li><a href="products.html" class="active">PRODUCTS</a></li>
+            <li><a href="glass-bottles.html">GLASS BOTTLES</a></li>
+            <li><a href="contact-us.html">CONTACT US</a></li>
+            <li><a href="career.html">CAREER</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Content -->
+    <section class="products-section">
+        <div class="products-container">
+            <div class="products-header">
+                <h1>Our Premium Water Bottles</h1>
+                <p>Discover our collection of high-quality, eco-friendly water bottles designed for your active lifestyle. Stay hydrated in style with CLEAR.</p>
+            </div>
+
+            <div class="products-filter">
+                <div class="filter-group">
+                    <span class="filter-label">Filter by:</span>
+                    <select class="filter-select">
+                        <option>All Products</option>
+                        <option>Stainless Steel</option>
+                        <option>Glass Bottles</option>
+                        <option>Insulated</option>
+                        <option>With Straw</option>
+                    </select>
+                    <select class="filter-select">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Customer Rating</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+                <div class="view-toggle">
+                    <button class="view-btn active">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <rect x="0.5" y="0.5" width="5" height="5" rx="0.5" stroke="currentColor"></rect>
+                            <rect x="0.5" y="10.5" width="5" height="5" rx="0.5" stroke="currentColor"></rect>
+                            <rect x="10.5" y="0.5" width="5" height="5" rx="0.5" stroke="currentColor"></rect>
+                            <rect x="10.5" y="10.5" width="5" height="5" rx="0.5" stroke="currentColor"></rect>
+                        </svg>
+                    </button>
+                    <button class="view-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <rect x="0.5" y="0.5" width="15" height="5" rx="0.5" stroke="currentColor"></rect>
+                            <rect x="0.5" y="5.5" width="15" height="5" rx="0.5" stroke="currentColor"></rect>
+                            <rect x="0.5" y="10.5" width="15" height="5" rx="0.5" stroke="currentColor"></rect>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Bestseller</span>
+                        <img src="https://via.placeholder.com/300x300" alt="CLEAR Stainless Steel Bottle">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Quick View">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn" title="Add to Wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Stainless Steel</span>
+                        <h3 class="product-title">CLEAR Stainless Steel Bottle - 750ml</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,299</span>
+                            <span class="original-price">₹1,599</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                ★★★★☆
+                            </div>
+                            <span class="rating-count">(128)</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300" alt="CLEAR Glass Bottle with Sleeve">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Quick View">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn" title="Add to Wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Glass Bottle</span>
+                        <h3 class="product-title">CLEAR Glass Bottle with Sleeve - 500ml</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹799</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+                            <span class="rating-count">(94)</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">New</span>
+                        <img src="https://via.placeholder.com/300x300" alt="CLEAR Insulated Sports Bottle">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Quick View">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn" title="Add to Wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Sports Bottle</span>
+                        <h3 class="product-title">CLEAR Insulated Sports Bottle - 1L</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,599</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                ★★★★☆
+                            </div>
+                            <span class="rating-count">(42)</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300" alt="CLEAR Kids Water Bottle">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Quick View">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn" title="Add to Wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Kids Bottle</span>
+                        <h3 class="product-title">CLEAR Kids Water Bottle with Straw - 400ml</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹699</span>
+                            <span class="original-price">₹899</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+                            <span class="rating-count">(76)</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300" alt="CLEAR Copper Bottle">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Quick View">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn" title="Add to Wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Copper Bottle</span>
+                        <h3 class="product-title">CLEAR Ayurvedic Copper Bottle - 750ml</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,899</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                ★★★★☆
+                            </div>
+                            <span class="rating-count">(58)</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Limited</span>
+                        <img src="https://via.placeholder.com/300x300" alt="CLEAR Travel Bottle Set">
+                        <div class="product-actions">
+                            <button class="action-btn" title="Quick View">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn" title="Add to Wishlist">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Bottle Set</span>
+                        <h3 class="product-title">CLEAR Travel Bottle Set (3 Pieces)</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹2,499</span>
+                            <span class="original-price">₹3,199</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+                            <span class="rating-count">(112)</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn">«</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">»</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column" data-animate="fade-up" data-delay="0">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="glass-bottles.html">Glass Bottles</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="100">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="200">
+                    <h3>Branch Offices</h3>
+                    <address>
+                        <p>Mumbai Office:<br>123 Marine Drive, Mumbai 400001</p>
+                        <p>Delhi Office:<br>456 Connaught Place, New Delhi 110001</p>
+                        <p>Bangalore Office:<br>789 MG Road, Bangalore 560001</p>
+                    </address>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="300">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 CLEAR Water Bottles. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <img src="../payment-icons.png" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Product listing functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // View toggle buttons
+            const viewBtns = document.querySelectorAll('.view-btn');
+            viewBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    viewBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    // Here you would change the product display layout
+                });
+            });
+
+            // Add to cart buttons
+            const addToCartBtns = document.querySelectorAll('.add-to-cart');
+            addToCartBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productCard = this.closest('.product-card');
+                    const productTitle = productCard.querySelector('.product-title').textContent;
+                    alert(`Added "${productTitle}" to cart!`);
+                    // Here you would add the product to the cart in your app logic
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuClose = document.querySelector('.mobile-menu-close');
+            if (mobileMenuToggle && mobileMenu && mobileMenuClose) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.add('open');
+                });
+                mobileMenuClose.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                });
+            }
+
+            // Newsletter form
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    alert(`Subscribed with ${email}!`);
+                    this.reset();
+                });
+            }
+        });
+    </script>
+
+    </body>
+    </html>

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Bottles - CLEAR Water Bottles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../logo.svg" alt="CLEAR Water Bottles">
+                    <span>CLEAR</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
+                    <li><a href="clear.html">CLEAR</a></li>
+                    <li><a href="glass-bottles.html" class="active">GLASS BOTTLES</a></li>
+                    <li><a href="contact-us.html">CONTACT US</a></li>
+                    <li><a href="career.html">CAREER</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </a>
+                <a href="profile.html" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 4a4 4 0 100 8 4 4 0 000-8z"></path>
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    </svg>
+                </a>
+                <a href="cart.html" class="icon-link cart-icon">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path
+                            d="M9 20a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm-7-4h8.59L21 8H7L5.5 4H3">
+                        </path>
+                    </svg>
+                    <span class="cart-badge">2</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="logo.svg" alt="CLEAR Water Bottles">
+                <span>CLEAR</span>
+            </div>
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" class="icon">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about-us.html">ABOUT US</a></li>
+            <li><a href="clear.html">CLEAR</a></li>
+            <li><a href="glass-bottles.html" class="active">GLASS BOTTLES</a></li>
+            <li><a href="contact-us.html">CONTACT US</a></li>
+            <li><a href="career.html">CAREER</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Banner -->
+    <section class="page-banner products-banner">
+        <div class="container">
+            <h1 data-animate="fade-up">Glass Bottles</h1>
+            <p data-animate="fade-up" data-delay="100">Premium hydration solutions for every lifestyle</p>
+        </div>
+    </section>
+
+    <!-- Product Filters -->
+    <section class="product-filters">
+        <div class="container">
+            <div class="filters-container" data-animate="fade-up">
+                <div class="filter-group">
+                    <label for="category-filter">Category</label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="classic">Classic</option>
+                        <option value="sport">Sport</option>
+                        <option value="insulated">Insulated</option>
+                        <option value="kids">Kids</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="size-filter">Size</label>
+                    <select id="size-filter" class="filter-select">
+                        <option value="all">All Sizes</option>
+                        <option value="350ml">350ml</option>
+                        <option value="500ml">500ml</option>
+                        <option value="750ml">750ml</option>
+                        <option value="1l">1L</option>
+                        <option value="1.5l">1.5L</option>
+                        <option value="2l">2L</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="color-filter">Color</label>
+                    <select id="color-filter" class="filter-select">
+                        <option value="all">All Colors</option>
+                        <option value="clear">Clear</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="black">Black</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="price-filter">Price</label>
+                    <select id="price-filter" class="filter-select">
+                        <option value="all">All Prices</option>
+                        <option value="under-1000">Under ₹1,000</option>
+                        <option value="1000-1500">₹1,000 - ₹1,500</option>
+                        <option value="1500-2000">₹1,500 - ₹2,000</option>
+                        <option value="over-2000">Over ₹2,000</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sort-filter">Sort By</label>
+                    <select id="sort-filter" class="filter-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest</option>
+                        <option value="bestselling">Best Selling</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="active-filters" data-animate="fade-up" data-delay="100">
+                <span class="filter-tag">Classic <button class="remove-filter">×</button></span>
+                <span class="filter-tag">750ml <button class="remove-filter">×</button></span>
+                <button class="clear-filters">Clear All</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-animate="fade-up" data-delay="0" data-category="classic" data-size="1l"
+                    data-color="clear">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-tag">NEW</div>
+                        <div class="product-actions">
+                            <button class="product-action-btn quick-view" title="Quick View">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="product-action-btn add-wishlist" title="Add to Wishlist">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle 1L Glass Bottle</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(4.8)</span>
+                        </div>
+                        <div class="product-price">₹1,499.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-animate="fade-up" data-delay="100" data-category="classic"
+                    data-size="750ml" data-color="blue">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-tag">NEW</div>
+                        <div class="product-actions">
+                            <button class="product-action-btn quick-view" title="Quick View">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="product-action-btn add-wishlist" title="Add to Wishlist">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle 750ml Glass Bottle</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(4.7)</span>
+                        </div>
+                        <div class="product-price">₹1,299.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-animate="fade-up" data-delay="200" data-category="classic" data-size="2l"
+                    data-color="clear">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-tag">NEW</div>
+                        <div class="product-actions">
+                            <button class="product-action-btn quick-view" title="Quick View">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="product-action-btn add-wishlist" title="Add to Wishlist">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle 2L Glass Bottle</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(4.9)</span>
+                        </div>
+                        <div class="product-price">₹1,899.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-animate="fade-up" data-delay="0" data-category="classic"
+                    data-size="500ml" data-color="green">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-actions">
+                            <button class="product-action-btn quick-view" title="Quick View">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="product-action-btn add-wishlist" title="Add to Wishlist">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle 500ml Glass Bottle</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(4.2)</span>
+                        </div>
+                        <div class="product-price">₹999.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-animate="fade-up" data-delay="100" data-category="insulated"
+                    data-size="1.5l" data-color="black">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-actions">
+                            <button class="product-action-btn quick-view" title="Quick View">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="product-action-btn add-wishlist" title="Add to Wishlist">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle 1.5L Glass Bottle</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(4.5)</span>
+                        </div>
+                        <div class="product-price">₹1,699.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-animate="fade-up" data-delay="200" data-category="sport"
+                    data-size="750ml" data-color="red">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-actions">
+                            <button class="product-action-btn quick-view" title="Quick View">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="product-action-btn add-wishlist" title="Add to Wishlist">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Water Bottle Travel Pack</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(4.8)</span>
+                        </div>
+                        <div class="product-price">₹2,499.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-animate="fade-up" data-delay="0" data-category="kids" data-size="350ml"
+                    data-color="blue">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-tag">BESTSELLER</div>
+                        <div class="product-actions">
+                            <button class="product-action-btn quick-view" title="Quick View">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="product-action-btn add-wishlist" title="Add to Wishlist">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Kids Water Bottle 350ml</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(4.9)</span>
+                        </div>
+                        <div class="product-price">₹799.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-animate="fade-up" data-delay="100" data-category="sport" data-size="1l"
+                    data-color="green">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-actions">
+                            <button class="product-action-btn quick-view" title="Quick View">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="product-action-btn add-wishlist" title="Add to Wishlist">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Sport Water Bottle 1L</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(4.3)</span>
+                        </div>
+                        <div class="product-price">₹1,599.00</div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card" data-animate="fade-up" data-delay="200" data-category="insulated"
+                    data-size="750ml" data-color="black">
+                    <div class="product-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottle">
+                        <div class="product-tag">SALE</div>
+                        <div class="product-actions">
+                            <button class="product-action-btn quick-view" title="Quick View">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="product-action-btn add-wishlist" title="Add to Wishlist">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Clear Insulated Water Bottle 750ml</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">₹1,499.00</span>
+                            ₹1,299.00
+                        </div>
+                        <button class="btn btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination" data-animate="fade-up">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn next">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M9 18l6-6-6-6"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Benefits -->
+    <section class="product-benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item" data-animate="fade-up" data-delay="0">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <h3>Free Shipping</h3>
+                    <p>On all orders above ₹1,000</p>
+                </div>
+
+                <div class="benefit-item" data-animate="fade-up" data-delay="100">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    <h3>Quality Guarantee</h3>
+                    <p>2-year warranty on all bottles</p>
+                </div>
+
+                <div class="benefit-item" data-animate="fade-up" data-delay="200">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <rect x="1" y="3" width="22" height="5"></rect>
+                            <rect x="1" y="11" width="22" height="5"></rect>
+                            <rect x="1" y="19" width="22" height="2"></rect>
+                        </svg>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>Multiple payment options</p>
+                </div>
+
+                <div class="benefit-item" data-animate="fade-up" data-delay="300">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>Store Pickup</h3>
+                    <p>Available in 45+ cities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column" data-animate="fade-up" data-delay="0">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="clear.html">CLEAR</a></li>
+                        <li><a href="glass-bottles.html">Glass Bottles</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="100">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="200">
+                    <h3>Branch Offices</h3>
+                    <address>
+                        <p>Mumbai Office:<br>123 Marine Drive, Mumbai 400001</p>
+                        <p>Delhi Office:<br>456 Connaught Place, New Delhi 110001</p>
+                        <p>Bangalore Office:<br>789 MG Road, Bangalore 560001</p>
+                    </address>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="300">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 CLEAR Water Bottles. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <img src="payment-icons.png" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+/* Animation Styles */
+
+/* Floating animation for bottle */
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Pulse animation for play button */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(230, 46, 45, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(230, 46, 45, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(230, 46, 45, 0);
+    }
+}
+
+/* Fade up animation for sections */
+[data-animate="fade-up"] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animate="fade-up"].animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade left animation */
+[data-animate="fade-left"] {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animate="fade-left"].animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade right animation */
+[data-animate="fade-right"] {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animate="fade-right"].animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Zoom in animation */
+[data-animate="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animate="zoom-in"].animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Count up animation for stats */
+.count-up {
+    display: inline-block;
+}
+
+/* Button hover effect */
+.animate-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.animate-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.animate-btn:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+/* Slide in animation for mobile menu */
+.mobile-menu.active {
+    animation: slideIn 0.4s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Staggered animation delay */
+[data-delay="0"] {
+    transition-delay: 0s;
+}
+
+[data-delay="50"] {
+    transition-delay: 0.05s;
+}
+
+[data-delay="100"] {
+    transition-delay: 0.1s;
+}
+
+[data-delay="150"] {
+    transition-delay: 0.15s;
+}
+
+[data-delay="200"] {
+    transition-delay: 0.2s;
+}
+
+[data-delay="250"] {
+    transition-delay: 0.25s;
+}
+
+[data-delay="300"] {
+    transition-delay: 0.3s;
+}
+
+[data-delay="350"] {
+    transition-delay: 0.35s;
+}
+
+[data-delay="400"] {
+    transition-delay: 0.4s;
+}
+
+[data-delay="450"] {
+    transition-delay: 0.45s;
+}
+
+[data-delay="500"] {
+    transition-delay: 0.5s;
+}
+
+[data-delay="550"] {
+    transition-delay: 0.55s;
+}
+
+[data-delay="600"] {
+    transition-delay: 0.6s;
+}
+

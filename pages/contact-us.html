@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CLEAR Water Bottles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <!-- <link rel="stylesheet" href="../animations.css"> -->
+    <!-- <link rel="stylesheet" href="../pages.css"> -->
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../logo.svg" alt="CLEAR Water Bottles">
+                    <span>CLEAR</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
+                    <li><a href="clear.html">CLEAR</a></li>
+                    <li><a href="glass-bottles.html">GLASS BOTTLES</a></li>
+                    <li><a href="contact-us.html" class="active">CONTACT US</a></li>
+                    <li><a href="career.html">CAREER</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </a>
+                <a href="profile.html" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 4a4 4 0 100 8 4 4 0 000-8z"></path>
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    </svg>
+                </a>
+                <a href="cart.html" class="icon-link cart-icon">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path
+                            d="M9 20a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm-7-4h8.59L21 8H7L5.5 4H3">
+                        </path>
+                    </svg>
+                    <span class="cart-badge">2</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="logo.svg" alt="CLEAR Water Bottles">
+                <span>CLEAR</span>
+            </div>
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" class="icon">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about-us.html" class="active">ABOUT US</a></li>
+            <li><a href="clear.html">CLEAR</a></li>
+            <li><a href="glass-bottles.html">GLASS BOTTLES</a></li>
+            <li><a href="contact-us.html">CONTACT US</a></li>
+            <li><a href="career.html">CAREER</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Talk To Us</h2>
+            <form class="contact-form" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <span class="char-count">0 / 10</span>
+                    <input type="tel" id="phone" name="phone" maxlength="10" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="work">Line of Work</label>
+                        <select id="work" name="work">
+                            <option value="Distributor">Distributor</option>
+                            <option value="Retailer">Retailer</option>
+                            <option value="Co-Packer">Co-Packer</option>
+                            <option value="End-Customer">End-Customer</option>
+                            <option value="Caterer">Caterer</option>
+                            <option value="Hotels">Hotels</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <select id="quantity" name="quantity">
+                            <option value="1000 ML">1000 ML</option>
+                            <option value="500 ML">500 ML</option>
+                            <option value="200 ML">200 ML</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bottle-type">Bottle Type</label>
+                    <select id="bottle-type" name="bottle-type">
+                        <option value="CLEAR">CLEAR</option>
+                        <option value="CLEARTH">CLEARTH</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <input type="text" id="message" name="message" placeholder="E.g. text placeholder">
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column" data-animate="fade-up" data-delay="0">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="clear.html">CLEAR</a></li>
+                        <li><a href="glass-bottles.html">Glass Bottles</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="100">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="200">
+                    <h3>Branch Offices</h3>
+                    <address>
+                        <p>Mumbai Office:<br>123 Marine Drive, Mumbai 400001</p>
+                        <p>Delhi Office:<br>456 Connaught Place, New Delhi 110001</p>
+                        <p>Bangalore Office:<br>789 MG Road, Bangalore 560001</p>
+                    </address>
+                </div>
+
+                <div class="footer-column" data-animate="fade-up" data-delay="300">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 CLEAR Water Bottles. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <img src="payment-icons.png" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

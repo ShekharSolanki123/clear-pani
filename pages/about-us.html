@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CLEAR Water Bottles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <!-- <link rel="stylesheet" href="../animations.css"> -->
+    <!-- <link rel="stylesheet" href="../pages.css"> -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../logo.svg" alt="CLEAR Water Bottles">
+                    <span>CLEAR</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="about-us.html" class="active">ABOUT US</a></li>
+                    <li><a href="clear.html">CLEAR</a></li>
+                    <li><a href="glass-bottles.html">GLASS BOTTLES</a></li>
+                    <li><a href="contact-us.html">CONTACT US</a></li>
+                    <li><a href="career.html">CAREER</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <a href="#" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </a>
+                <a href="profile.html" class="icon-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 4a4 4 0 100 8 4 4 0 000-8z"></path>
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    </svg>
+                </a>
+                <a href="cart.html" class="icon-link cart-icon">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M9 20a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm-7-4h8.59L21 8H7L5.5 4H3"></path>
+                    </svg>
+                    <span class="cart-badge">2</span>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="logo.svg" alt="CLEAR Water Bottles">
+                <span>CLEAR</span>
+            </div>
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" class="icon">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about-us.html" class="active">ABOUT US</a></li>
+            <li><a href="clear.html">CLEAR</a></li>
+            <li><a href="glass-bottles.html">GLASS BOTTLES</a></li>
+            <li><a href="contact-us.html">CONTACT US</a></li>
+            <li><a href="career.html">CAREER</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1 data-animate="fade-up">About Us</h1>
+            <p data-animate="fade-up" data-delay="100">Learn about our journey, mission, and the team behind CLEAR Water Bottles</p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="about-story">
+        <div class="container">
+            <div class="about-story-content">
+                <div class="about-story-image" data-animate="fade-right">
+                    <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="CLEAR Water Bottles Story">
+                </div>
+                <div class="about-story-text" data-animate="fade-left">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2010, CLEAR Water Bottles began with a simple mission: to create premium water bottles that combine style, functionality, and environmental responsibility.</p>
+                    <p>What started as a small workshop in Mumbai has grown into a nationwide brand with a presence in 18 states across India. Our journey has been defined by innovation, quality, and a deep commitment to sustainability.</p>
+                    <p>Today, CLEAR is recognized as a leader in the premium water bottle industry, offering a wide range of products that help people stay hydrated while reducing plastic waste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="mission-values">
+        <div class="container">
+            <h2 data-animate="fade-up">Our Mission & Values</h2>
+            
+            <div class="mission-box" data-animate="fade-up">
+                <div class="mission-icon">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To provide the highest quality hydration solutions while reducing plastic waste and promoting a healthier, more sustainable lifestyle for our customers.</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card" data-animate="fade-up" data-delay="0">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    <h3>Quality</h3>
+                    <p>We are committed to excellence in every bottle we produce, using only the finest materials and rigorous quality control.</p>
+                </div>
+                
+                <div class="value-card" data-animate="fade-up" data-delay="100">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Environmental responsibility is at the core of our business. We design products that help reduce single-use plastic waste.</p>
+                </div>
+                
+                <div class="value-card" data-animate="fade-up" data-delay="200">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We continuously strive to improve our products through research, design, and technological advancement.</p>
+                </div>
+                
+                <div class="value-card" data-animate="fade-up" data-delay="300">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 010 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We believe in building strong relationships with our customers, employees, and the communities where we operate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Timeline -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 data-animate="fade-up">Our Journey</h2>
+            
+            <div class="timeline" data-animate="fade-up">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2010</h3>
+                        <p>CLEAR Water Bottles founded in Mumbai with a small team of 5 people.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2012</h3>
+                        <p>Launched our first line of premium glass water bottles.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2014</h3>
+                        <p>Expanded operations to 5 states across India.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2016</h3>
+                        <p>Received ISO certification for quality management systems.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2018</h3>
+                        <p>Launched eco-friendly packaging initiative, reducing plastic waste by 75%.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2020</h3>
+                        <p>Celebrated 10 years with presence in 15 states and over 500 employees.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <p>Expanded to 18 states with 1600+ employees and launched international shipping.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 data-animate="fade-up">Leadership Team</h2>
+            <p class="section-subtitle" data-animate="fade-up" data-delay="100">Meet the passionate individuals driving our mission forward</p>
+            
+            <div class="team-grid">
+                <div class="team-member" data-animate="fade-up" data-delay="0">
+                    <div class="member-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Rajesh Kumar">
+                    </div>
+                    <div class="member-info">
+                        <h3>Rajesh Kumar</h3>
+                        <p class="member-title">Founder & CEO</p>
+                        <p class="member-bio">With over 20 years of experience in sustainable product design, Rajesh founded CLEAR with a vision to revolutionize the water bottle industry.</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-animate="fade-up" data-delay="100">
+                    <div class="member-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Priya Sharma">
+                    </div>
+                    <div class="member-info">
+                        <h3>Priya Sharma</h3>
+                        <p class="member-title">Chief Operations Officer</p>
+                        <p class="member-bio">Priya oversees all operational aspects of CLEAR, ensuring efficient production and distribution across our nationwide network.</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-animate="fade-up" data-delay="200">
+                    <div class="member-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Vikram Patel">
+                    </div>
+                    <div class="member-info">
+                        <h3>Vikram Patel</h3>
+                        <p class="member-title">Head of Design</p>
+                        <p class="member-bio">Vikram leads our design team, combining aesthetics with functionality to create our award-winning bottle designs.</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-animate="fade-up" data-delay="300">
+                    <div class="member-image">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Ananya Reddy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ananya Reddy</h3>
+                        <p class="member-title">Sustainability Director</p>
+                        <p class="member-bio">Ananya ensures that our commitment to environmental responsibility is reflected in every aspect of our business.</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link">
+                                <svg viewBox="0 0 24 24" class="icon">
+                                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications-section">
+        <div class="container">
+            <h2 data-animate="fade-up">Our Certifications</h2>
+            <p class="section-subtitle" data-animate="fade-up" data-delay="100">We adhere to the highest standards of quality and safety</p>
+            
+            <div class="certifications-grid">
+                <div class="certification-item" data-animate="fade-up" data-delay="0">
+                    <div class="certification-icon">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="ISO Certification">
+                    </div>
+                    <h3>ISO 9001:2015</h3>
+                    <p>Quality Management System</p>
+                </div>
+                
+                <div class="certification-item" data-animate="fade-up" data-delay="100">
+                    <div class="certification-icon">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="BPA Free">
+                    </div>
+                    <h3>BPA Free</h3>
+                    <p>All products 100% BPA free</p>
+                </div>
+                
+                <div class="certification-item" data-animate="fade-up" data-delay="200">
+                    <div class="certification-icon">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="Eco-Friendly">
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Sustainable manufacturing practices</p>
+                </div>
+                
+                <div class="certification-item" data-animate="fade-up" data-delay="300">
+                    <div class="certification-icon">
+                        <img src="https://clearpani.com/wp-content/uploads/2025/03/Clear-Limited-Edition-200ml-Pack-of-5-Cases-Pack-of-240-bottles-1-800x800.png" alt="FDA Approved">
+                    </div>
+                    <h3>FDA Approved</h3>
+                    <p>Food-grade materials</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-animate="fade-up">
+                <h2>Join the CLEAR Movement</h2>
+                <p>Be part of our mission to reduce plastic waste while staying hydrated in style.</p>
+                <a href="glass-bottles.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column" data-animate="fade-up" data-delay="0">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="clear.html">CLEAR</a></li>
+                        <li><a href="glass-bottles.html">Glass Bottles</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column" data-animate="fade-up" data-delay="100">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column" data-animate="fade-up" data-delay="200">
+                    <h3>Branch Offices</h3>
+                    <address>
+                        <p>Mumbai Office:<br>123 Marine Drive, Mumbai 400001</p>
+                        <p>Delhi Office:<br>456 Connaught Place, New Delhi 110001</p>
+                        <p>Bangalore Office:<br>789 MG Road, Bangalore 560001</p>
+                    </address>
+                </div>
+                
+                <div class="footer-column" data-animate="fade-up" data-delay="300">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" class="icon">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 CLEAR Water Bottles. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <img src="payment-icons.png" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
